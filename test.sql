@@ -17,3 +17,11 @@ CREATE TABLE `users` (
   `email` varchar(40) DEFAULT NULL,
   `balance` INT DEFAULT NULL
 );
+
+CREATE TABLE `records` (
+  `date_sold` VARCHAR(40) DEFAULT NULL,
+  `book_id` int DEFAULT NULL,
+  `seller_id` varchar(40) DEFAULT NULL,
+  `buyer_id` varchar(40) DEFAULT NULL,
+  `price_sold` INT DEFAULT NULL
+);
