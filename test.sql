@@ -32,4 +32,7 @@ CREATE TABLE `records` (
     FOREIGN KEY (buyer_vnum) REFERENCES users(vnum)
 );
 
+CREATE TABLE `admin` (
+  `name` VARCHAR(40) DEFAULT NULL
+);
 
