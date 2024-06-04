@@ -20,10 +20,6 @@ CREATE TABLE `users` (
   `balance` INT DEFAULT NULL
 );
 
-CREATE TABLE `admin_test` (
-  `name` VARCHAR(40) DEFAULT NULL
-);
-
 
 CREATE TABLE `records` (
   `date_sold` VARCHAR(40) DEFAULT NULL,
