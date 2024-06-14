@@ -9,7 +9,7 @@ CREATE TABLE `books` (
   `author` varchar(255) DEFAULT NULL,
   `course` varchar(255) DEFAULT NULL,
   `price` INT DEFAULT NULL,
-  `status` VARCHAR(10) DEFAULT 'for sale' --Added `` to status. Is this correct? - alex
+  `status` VARCHAR(10) DEFAULT 'for sale' -- Added `` to status. Is this correct? - alex
     -- `subtextID` ?
 );
 
@@ -25,7 +25,7 @@ CREATE TABLE `users` (
 -- Change to transactions
 CREATE TABLE `records` (
   `date_sold` VARCHAR(40) DEFAULT NULL,
-  `ISBN` VARCHAR(15) NOT NULL, --potentially remove?
+  `ISBN` VARCHAR(15) NOT NULL, -- potentially remove?
   `seller_vnum` varchar(40) NOT NULL,
   `buyer_vnum` varchar(40) NOT NULL,
   `price_sold` INT DEFAULT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `records` (
 );
 
 -- CREATE TABLE `records` (
-  --`ISBN` VARCHAR(40) DEFAULT NULL,
-  --`subtextID` varchar(40) NOT NULL,
+  -- `ISBN` VARCHAR(40) DEFAULT NULL,
+  -- `subtextID` varchar(40) NOT NULL,
 
 
