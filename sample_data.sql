@@ -1,41 +1,82 @@
+-- Authors data
+INSERT INTO `authors` (`author_id`, `author_name`) VALUES
+(1, 'J.K. Rowling'),
+(2, 'George R.R. Martin'),
+(3, 'J.R.R. Tolkien'),
+(4, 'Agatha Christie'),
+(5, 'Stephen King');
 
--- Inserting data into Books table
-INSERT INTO books (title, isbn, author, course, price, status) VALUES
-('Dune', '9780441172719', 'Frank Herbert', 'ENGL101', 25, 'sold'),
-('Pride and Prejudice', '9780141439518', 'Jane Austen', 'ENGL102', 20, 'sold'),
-('The Adventures of Tom Sawyer', '9780140620698', 'Mark Twain', 'ENGL103', 15, 'sold'),
-('The Great Gatsby', '9780743273565', 'F. Scott Fitzgerald', 'ENGL104', 18, 'sold'),
-('A Brief History of Time', '9780553380163', 'Stephen Hawking', 'PHYS101', 22, 'sold'),
-('To Kill a Mockingbird', '9780061120084', 'Harper Lee', 'ENGL105', 19, 'for sale'),
-('1984', '9780451524935', 'George Orwell', 'ENGL106', 17, 'for sale'),
-('The Catcher in the Rye', '9780316769488', 'J.D. Salinger', 'ENGL107', 21, 'for sale'),
-('Brave New World', '9780060850524', 'Aldous Huxley', 'ENGL108', 23, 'for sale'),
-('The Art of Computer Programming', '9780201896831', 'Donald Knuth', 'CSC101', 50, 'for sale'),
-('Introduction to Algorithms', '9780262033848', 'Thomas H. Cormen', 'CSC102', 45, 'for sale'),
-('Artificial Intelligence: A Modern Approach', '9780136042594', 'Stuart Russell', 'CSC103', 55, 'for sale'),
-('Clean Code', '9780132350884', 'Robert C. Martin', 'CSC104', 40, 'for sale'),
-('The Pragmatic Programmer', '9780201616224', 'Andrew Hunt', 'CSC105', 35, 'for sale'),
-('Algorithms Unlocked', '9780262518802', 'Thomas H. Cormen', 'CSC106', 30, 'for sale');
+-- Auth_book data
+INSERT INTO `auth_book` (`ISBN`, `author_id`, `edition`, `year`) VALUES
+('978-0-7475-3274-3', 1, '1st', 1997),
+('978-0-5531-0354-0', 2, '1st', 1996),
+('978-0-5440-0341-5', 3, '1st', 1954),
+('978-0-0620-7348-8', 4, '1st', 1920),
+('978-1-5011-4297-0', 5, '1st', 1977);
 
--- Inserting data into Users table
-INSERT INTO users (name, vnum, email, balance) VALUES
-('Alice Smith', 'V01234567', 'alice.smith@example.com', 5000),
-('Bob Johnson', 'V02345678', 'bob.johnson@example.com', 3000),
-('Charlie Brown', 'V03456789', 'charlie.brown@example.com', 2000),
-('Diana Williams', 'V04567890', 'diana.williams@example.com', 4000),
-('Eve Adams', 'V05678901', 'eve.adams@example.com', 6000),
-('Franklin Brown', 'V06789012', 'franklin.brown@example.com', 2500),
-('Grace Green', 'V07890123', 'grace.green@example.com', 3500),
-('Hannah White', 'V08901234', 'hannah.white@example.com', 4500),
-('Ivan Black', 'V09012345', 'ivan.black@example.com', 1500),
-('Jack Grey', 'V01234568', 'jack.grey@example.com', 7000),
-('Kelly Blue', 'V02345679', 'kelly.blue@example.com', 3000),
-('Liam Silver', 'V03456780', 'liam.silver@example.com', 5000);
+-- Books data
+INSERT INTO `books` (`title`, `ISBN`, `type`) VALUES
+('Harry Potter and the Philosopher\'s Stone', '978-0-7475-3274-3', 'Fantasy'),
+('A Game of Thrones', '978-0-5531-0354-0', 'Fantasy'),
+('The Lord of the Rings', '978-0-5440-0341-5', 'Fantasy'),
+('The Mysterious Affair at Styles', '978-0-0620-7348-8', 'Mystery'),
+('The Shining', '978-1-5011-4297-0', 'Horror');
 
--- Inserting data into Records table
-INSERT INTO records (date_sold, isbn, seller_vnum, buyer_vnum, price_sold) VALUES
-('2024-05-20', '9780441172719', 'V04567890','V03456789', 25),
-('2024-05-21', '9780141439518', 'V02345678', 'V02345679', 20),
-('2024-05-22', '9780140620698', 'V03456780', 'V03456780', 15),
-('2024-05-23', '9780743273565', 'V09012345', 'V07890123', 18),
-('2024-05-24', '9780553380163', 'V09012345', 'V08901234', 22);
+-- Book_price data
+INSERT INTO `book_price` (`ISBN`, `price`) VALUES
+('978-0-7475-3274-3', 20),
+('978-0-5531-0354-0', 25),
+('978-0-5440-0341-5', 30),
+('978-0-0620-7348-8', 15),
+('978-1-5011-4297-0', 18);
+
+-- Course data
+INSERT INTO `course` (`course_id`, `course_name`, `field_of_study`) VALUES
+('CSC101', 'Introduction to Computer Science', 'Computer Science'),
+('ENG201', 'English Literature', 'Literature'),
+('HIS301', 'World History', 'History'),
+('BIO101', 'Biology Basics', 'Biology'),
+('PSY201', 'Psychology 101', 'Psychology'),
+('MATH101', 'Calculus I', 'Mathematics'),
+('PHYS201', 'Physics I', 'Physics');
+
+-- Required_text data
+INSERT INTO `required_text` (`ISBN`, `course_id`) VALUES
+('978-0-7475-3274-3', 'ENG201'),
+('978-0-5531-0354-0', 'ENG201'),
+('978-0-5440-0341-5', 'ENG201'),
+('978-0-0620-7348-8', 'ENG201'),
+('978-1-5011-4297-0', 'PSY201'),
+('978-1-5011-4297-0', 'MATH101');
+
+-- User_account data
+INSERT INTO `user_account` (`v_number`, `name`, `email`, `balance`) VALUES
+('V00000123', 'Alice Smith', 'alice.smith@example.com', 100),
+('V00000456', 'Bob Johnson', 'bob.johnson@example.com', 150),
+('V00000789', 'Charlie Brown', 'charlie.brown@example.com', 200),
+('V01000123', 'Diana Prince', 'diana.prince@example.com', 250),
+('V01000456', 'Eve Adams', 'eve.adams@example.com', 300);
+
+-- Transactions data
+INSERT INTO `transactions` (`record_id`, `date_sold`, `ISBN`, `v_number`, `price_sold`) VALUES
+(1, '2023-01-01', '978-0-7475-3274-3', 'V00000123', 20),
+(2, '2023-02-01', '978-0-5531-0354-0', 'V00000456', 25),
+(3, '2023-03-01', '978-0-5440-0341-5', 'V00000789', 30),
+(4, '2023-04-01', '978-0-0620-7348-8', 'V01000123', 15),
+(5, '2023-05-01', '978-1-5011-4297-0', 'V01000456', 18);
+
+-- Price_record data
+INSERT INTO `price_record` (`price_sold`, `seller_split`) VALUES
+(20, 10),
+(25, 12),
+(30, 15),
+(15, 7),
+(18, 9);
+
+-- Book_sale data
+INSERT INTO `book_sale` (`ISBN`, `quantity`) VALUES
+('978-0-7475-3274-3', 100),
+('978-0-5531-0354-0', 80),
+('978-0-5440-0341-5', 70),
+('978-0-0620-7348-8', 50),
+('978-1-5011-4297-0', 60);
