@@ -1,3 +1,15 @@
+DROP TABLE IF EXISTS book_sale;
+DROP TABLE IF EXISTS price_record;
+DROP TABLE IF EXISTS transactions;
+DROP TABLE IF EXISTS user_account;
+DROP TABLE IF EXISTS required_text;
+DROP TABLE IF EXISTS course;
+DROP TABLE IF EXISTS book_price;
+DROP TABLE IF EXISTS books;
+DROP TABLE IF EXISTS auth_book;
+DROP TABLE IF EXISTS authors;
+
+
 CREATE TABLE `authors` (
     `author_id` INT NOT NULL PRIMARY KEY,
     `author_name` VARCHAR(20) DEFAULT NULL

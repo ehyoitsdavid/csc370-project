@@ -1,3 +1,21 @@
+USE CSC370;
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+TRUNCATE TABLE book_sale;
+TRUNCATE TABLE price_record;
+TRUNCATE TABLE transactions;
+TRUNCATE TABLE user_account;
+TRUNCATE TABLE required_text;
+TRUNCATE TABLE course;
+TRUNCATE TABLE book_price;
+TRUNCATE TABLE books;
+TRUNCATE TABLE auth_book;
+TRUNCATE TABLE authors;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+
 -- Authors data
 INSERT INTO `authors` (`author_id`, `author_name`) VALUES
 (1, 'J.K. Rowling'),
@@ -16,11 +34,11 @@ INSERT INTO `auth_book` (`ISBN`, `author_id`, `edition`, `year`) VALUES
 
 -- Books data
 INSERT INTO `books` (`title`, `ISBN`, `type`) VALUES
-('Harry Potter and the Philosopher\'s Stone', '978-0-7475-3274-3', 'Fantasy'),
+('Harry Potter and the Philosopher`s Stone', '978-0-7475-3274-3', 'Fantasy'),
 ('A Game of Thrones', '978-0-5531-0354-0', 'Fantasy'),
 ('The Lord of the Rings', '978-0-5440-0341-5', 'Fantasy'),
 ('The Mysterious Affair at Styles', '978-0-0620-7348-8', 'Mystery'),
-('The Shining', '978-1-5011-4297-0', 'Horror');
+('Math of Psychology', '978-1-5011-4297-0', 'Science');
 
 -- Book_price data
 INSERT INTO `book_price` (`ISBN`, `price`) VALUES
