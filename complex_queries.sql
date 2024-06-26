@@ -38,7 +38,7 @@ GROUP BY
 HAVING
     COUNT(c.course_id) > 1
 ORDER BY
-    b.title;
+    b.ISBN;
 
 -- Shows all textbooks with prices above the average price of all books
 SELECT 
