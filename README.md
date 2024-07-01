@@ -3,7 +3,7 @@ CSC370 group project: Subtext inventory database
 
 Group members: Alex, David, Jaiya, Nico
 
-Files: 
+File Description: 
 
 tables.sql - creates the tables for the database 
 
