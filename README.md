@@ -13,5 +13,6 @@ HOW TO LOAD DATA INTO YOUR OWN MYSQL DATABASE:
 FILES: 
 
 tables.sql - creates the tables for the database 
+
 sample_data.sql - loads the tables with sample data
 
