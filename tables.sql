@@ -1,3 +1,5 @@
+USE testdb;
+
 -- Drop in reverse order of creating the tables
 DROP TABLE IF EXISTS inventory;
 DROP TABLE IF EXISTS transactions;
@@ -12,12 +14,12 @@ DROP TABLE IF EXISTS authors;
 -- Order of creation is important so that we have the appropriate foreign key references
 CREATE TABLE `authors` (
     `author_id` INT NOT NULL PRIMARY KEY,
-    `author_name` VARCHAR(40) DEFAULT NULL
+    `author_name` VARCHAR(30) DEFAULT NULL
 );
 
 CREATE TABLE `books` (
     `book_id` INT NOT NULL PRIMARY KEY, 
-    `title` VARCHAR(100) DEFAULT NULL,
+    `title` VARCHAR(75) DEFAULT NULL,
     `type` VARCHAR(15) NOT NULL
 );
 
