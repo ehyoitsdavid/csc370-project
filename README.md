@@ -17,6 +17,10 @@ SCHEMA FILES:
 
 - sample_data.sql - loads the tables with sample data
 
+SPRINT 4 FILES: 
+
+- No SQL Files but ERD updated
+
 SPRINT 3 FILES: 
 
 - transaction.sql - created a test transaction 
