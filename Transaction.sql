@@ -45,7 +45,7 @@ END //
 DELIMITER ;
 
 -- Call the procedure
-CALL process_order('V000000123');
+CALL process_order('V00000123');
 
 -- Query the transactions table to see the inserted transactions
-SELECT * FROM transactions WHERE v_number = 'V000000123';
+SELECT * FROM transactions WHERE v_number = 'V00000123';
