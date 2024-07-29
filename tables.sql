@@ -47,12 +47,21 @@ CREATE TABLE `required_text` (
     FOREIGN KEY (course_id) REFERENCES course(course_id)
 );
 
-CREATE TABLE `user_account` (
+CREATE TABLE `user_account_vname` (
     `v_number` VARCHAR(10) NOT NULL PRIMARY KEY,
-    `name` VARCHAR(40) DEFAULT NULL,
-    `email` varchar(40) DEFAULT NULL,
+    `name` VARCHAR(40) DEFAULT NULL
+);
+
+CREATE TABLE `user_account_vemail` (
+    `v_number` VARCHAR(10) NOT NULL PRIMARY KEY,
+    `email` varchar(40) DEFAULT NULL
+);
+
+CREATE TABLE `user_account_vbalance` (
+    `v_number` VARCHAR(10) NOT NULL PRIMARY KEY,
     `balance` INT DEFAULT NULL
 );
+
 
 CREATE TABLE `orders` (
     `order_id` INT NOT NULL PRIMARY KEY,
